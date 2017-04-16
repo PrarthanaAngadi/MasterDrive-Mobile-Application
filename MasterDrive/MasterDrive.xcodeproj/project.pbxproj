@@ -17,6 +17,7 @@
 		C1AC26D31E9C460E0058DC8E /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AC26D11E9C460E0058DC8E /* Logo.png */; };
 		C1AC26D51E9DA58E0058DC8E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC26D41E9DA58E0058DC8E /* RegistrationViewController.swift */; };
 		C1AC26D91EA0461B0058DC8E /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC26D81EA0461B0058DC8E /* VerificationViewController.swift */; };
+		C1C2CB6E1EA32C2400A04530 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C2CB6D1EA32C2400A04530 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C1AC26D11E9C460E0058DC8E /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		C1AC26D41E9DA58E0058DC8E /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		C1AC26D81EA0461B0058DC8E /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		C1C2CB6D1EA32C2400A04530 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				C1AC26CD1E9C36A50058DC8E /* PageViewController.swift */,
 				C1AC26D41E9DA58E0058DC8E /* RegistrationViewController.swift */,
 				C1AC26D81EA0461B0058DC8E /* VerificationViewController.swift */,
+				C1C2CB6D1EA32C2400A04530 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1C2CB6E1EA32C2400A04530 /* LoginViewController.swift in Sources */,
 				C1AC26CE1E9C36A50058DC8E /* PageViewController.swift in Sources */,
 				C1AC26B71E9BF3B00058DC8E /* ViewController.swift in Sources */,
 				C1AC26D91EA0461B0058DC8E /* VerificationViewController.swift in Sources */,

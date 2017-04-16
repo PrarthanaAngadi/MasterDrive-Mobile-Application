@@ -244,7 +244,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="6-digit Verification Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Pu-aj-gmG">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="6-digit Verification Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Pu-aj-gmG">
                                 <rect key="frame" x="17" y="178" width="342" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -272,7 +272,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="6-digit verification Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NKT-6A-s7B">
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="6-digit verification Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NKT-6A-s7B">
                                 <rect key="frame" x="17" y="369" width="342" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -287,19 +287,27 @@
                                 <state key="normal" title="Request Code">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="requestCodeButtonOnClick:" destination="JXy-aA-Cqc" eventType="touchUpInside" id="b7m-p8-KJN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.036453864820000001" green="0.84386588750000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailVerificationCode" destination="4Pu-aj-gmG" id="8mH-F9-lTi"/>
+                        <outlet property="mobileVerification" destination="NKT-6A-s7B" id="NUQ-vc-Igy"/>
+                        <segue destination="ejy-Ou-ce4" kind="show" identifier="VerificationToLogin" id="7xm-zP-HgX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNV-W7-SIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-943.20000000000005" y="407.0464767616192"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="mjv-5v-d2y">
             <objects>
-                <viewController id="ejy-Ou-ce4" sceneMemberID="viewController">
+                <viewController id="ejy-Ou-ce4" customClass="LoginViewController" customModule="MasterDrive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aJM-Kh-kT8"/>
                         <viewControllerLayoutGuide type="bottom" id="edF-MB-8jx"/>
@@ -327,7 +335,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeH-uA-DbC">
                                 <rect key="frame" x="16" y="244" width="343" height="46"/>
@@ -337,6 +345,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInButtonOnClick:" destination="ejy-Ou-ce4" eventType="touchUpInside" id="9y1-nV-59A"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idl-iM-5Kp">
                                 <rect key="frame" x="16" y="325" width="343" height="46"/>
@@ -363,10 +374,42 @@
                         </subviews>
                         <color key="backgroundColor" red="0.036453864820000001" green="0.84386588750000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="Dgb-gi-W7o" id="Nci-Hk-4vO"/>
+                        <outlet property="password" destination="dtW-Gr-U4I" id="AP1-Ma-stn"/>
+                        <segue destination="HdK-EX-qJd" kind="show" identifier="LoginToHomePage" id="Iwr-k8-OGL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rb4-4A-8QH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2522" y="1166"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XCY-8G-wf1">
+            <objects>
+                <viewController id="HdK-EX-qJd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I4n-9d-cAR"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Tf-5B-UvE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hSP-Gk-oqV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWV-uw-vrf">
+                                <rect key="frame" x="166" y="244" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNl-ha-Qzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2535.1999999999998" y="1887.7061469265368"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2RW-Sy-OFX">
@@ -425,7 +468,7 @@
         <image name="drives.png" width="258" height="195"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kDt-RK-uqB"/>
+        <segue reference="7xm-zP-HgX"/>
         <segue reference="LbX-Od-sfv"/>
     </inferredMetricsTieBreakers>
 </document>

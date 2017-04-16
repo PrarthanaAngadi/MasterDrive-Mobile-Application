@@ -16,8 +16,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var confirmPassword: UITextField!
     @IBOutlet var password: UITextField!
     
-    var registrationSuccess = false
-    var userExists = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,14 +103,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate{
             displayAlertMessage(input: errorMessage)
         } else {
             requestNewUserRegistration()
-            if(registrationSuccess) {
-                performSegue(withIdentifier: "RegisterToVerification", sender: nil)
-            }
-            else if (userExists) {
-                let errorMessage = "User already Exists! Do you want to request for a new password?"
-                displayPromptMessage(input: errorMessage)
-            }
-            
         }
     }
 
@@ -124,6 +114,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate{
         request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
         let param = "first_name="+firstName.text!+"&last_name="+lastName.text!+"&email="+email.text!+"&password="+password.text!
         request.httpBody = param.data(using: String.Encoding.utf8)
+        
         let task = session.dataTask(with: request as URLRequest) {
             (data, response, error) in
             
@@ -131,21 +122,35 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate{
                 print(error)
                 return
             }
+            
             let jsonDict : NSDictionary = try! JSONSerialization.jsonObject(with: receivedData as Data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
             let status = jsonDict.object(forKey: "status") as! NSDictionary
             let code = status.object(forKey: "code") as! Int
+            
             if(code == 2000) {
-                self.registrationSuccess = true
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "RegisterToVerification", sender: nil)
+                }
             }
             else {
                 let error = jsonDict.object(forKey: "error") as! NSDictionary
                 let errorStatus = error.object(forKey: "status") as! NSDictionary
                 let errorCode = errorStatus.object(forKey: "code") as! Int
                 if(errorCode == 3000) {
-                    self.userExists = true
+                    DispatchQueue.main.async {
+                    let errorMessage = "User already Exists! Do you want to request for a new password?"
+                    self.displayPromptMessage(input: errorMessage)
+                    }
+                }
+                else {
+                    DispatchQueue.main.async {
+                    let errorMessage = "Please try again later."
+                    self.displayAlertMessage(input: errorMessage)
+                    }
                 }
             }
         }
+        
         task.resume()
     }
     
@@ -169,7 +174,10 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if(segue.identifier == "RegisterToVerification") {
+            let viewController:VerificationViewController = segue.destination as! VerificationViewController
+            viewController.email = email.text
+        }
         
     }
 }
