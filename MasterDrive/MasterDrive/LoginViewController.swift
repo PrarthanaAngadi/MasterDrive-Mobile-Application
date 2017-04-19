@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     
+    var user:User? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,28 +50,48 @@ class LoginViewController: UIViewController {
                 let code = status.object(forKey: "code") as! Int
                 if(code == 2000) {
                     DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "LoginToHomePage", sender: nil)
+                        let jsonUser = jsonDict.object(forKey: "user") as! NSDictionary
+                        self.user = User(email: jsonUser.object(forKey: "email") as! String,
+                                              userId: jsonUser.object(forKey: "user_id") as! Int,
+                                              firstName: jsonUser.object(forKey: "first_name") as! String,
+                                              lastName:jsonUser.object(forKey: "last_name") as! String)
+                        let userDefaults = UserDefaults.standard
+                        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: self.user!)
+                        userDefaults.set(encodedData, forKey: "user")
+                        userDefaults.synchronize()
+                        self.performSegue(withIdentifier: "LoginToHomePage", sender: nil)
                     }
-                }
-                else {
-                    DispatchQueue.main.async {
+                }else{
+                    let error = jsonDict.object(forKey: "error") as! NSDictionary
+                    let errorStatus = error.object(forKey: "status") as! NSDictionary
+                    let errorCode = errorStatus.object(forKey: "code") as! Int
+                    if(errorCode == 3400) {
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "LoginToVerification", sender: nil)
+                        }
+                    } else {
+                        DispatchQueue.main.async {
                         let errorMessage = "Invalid Email & Password combination entered"
                         self.displayAlertMessage(input: errorMessage)
+                        }
                     }
                 }
             }
             task.resume()
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if(segue.identifier == "LoginToHomePage") {
+                let navController:UINavigationController = segue.destination as! UINavigationController
+                let viewController:HomePageViewController = navController.topViewController as! HomePageViewController
+             //   let viewController:HomePageViewController = segue.destination as! HomePageViewController
+                viewController.user = self.user
+            }else if(segue.identifier == "LoginToVerification") {
+                    let viewController:VerificationViewController = segue.destination as! VerificationViewController
+                    viewController.email = email.text
+            }
     }
-    */
+    
 
     func displayAlertMessage(input:String) {
         let alertController = UIAlertController(title: "Error", message:

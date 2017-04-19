@@ -18,6 +18,15 @@
 		C1AC26D51E9DA58E0058DC8E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC26D41E9DA58E0058DC8E /* RegistrationViewController.swift */; };
 		C1AC26D91EA0461B0058DC8E /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC26D81EA0461B0058DC8E /* VerificationViewController.swift */; };
 		C1C2CB6E1EA32C2400A04530 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C2CB6D1EA32C2400A04530 /* LoginViewController.swift */; };
+		C1C2CB721EA4E46800A04530 /* Dropbox_Logo_02.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C2CB6F1EA4E46800A04530 /* Dropbox_Logo_02.svg.png */; };
+		C1C2CB731EA4E46800A04530 /* google_drive.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C2CB701EA4E46800A04530 /* google_drive.png */; };
+		C1C2CB741EA4E46800A04530 /* onedrive.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C2CB711EA4E46800A04530 /* onedrive.png */; };
+		C1C2CB7C1EA4F24900A04530 /* Menu-30.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C2CB7B1EA4F24900A04530 /* Menu-30.png */; };
+		C1C2CB7E1EA4F7DC00A04530 /* DropboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C2CB7D1EA4F7DC00A04530 /* DropboxViewController.swift */; };
+		C1C2CB801EA4F96300A04530 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C2CB7F1EA4F96300A04530 /* HomePageViewController.swift */; };
+		C1C2CB831EA55B7000A04530 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C2CB821EA55B7000A04530 /* User.swift */; };
+		C1C2CB8F1EA6AAF800A04530 /* default_profile_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C2CB8E1EA6AAF800A04530 /* default_profile_photo.png */; };
+		C1C2CB911EA726EF00A04530 /* DropboxMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C2CB901EA726EF00A04530 /* DropboxMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +43,15 @@
 		C1AC26D41E9DA58E0058DC8E /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		C1AC26D81EA0461B0058DC8E /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		C1C2CB6D1EA32C2400A04530 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C1C2CB6F1EA4E46800A04530 /* Dropbox_Logo_02.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dropbox_Logo_02.svg.png; sourceTree = "<group>"; };
+		C1C2CB701EA4E46800A04530 /* google_drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google_drive.png; sourceTree = "<group>"; };
+		C1C2CB711EA4E46800A04530 /* onedrive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onedrive.png; sourceTree = "<group>"; };
+		C1C2CB7B1EA4F24900A04530 /* Menu-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu-30.png"; sourceTree = "<group>"; };
+		C1C2CB7D1EA4F7DC00A04530 /* DropboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxViewController.swift; sourceTree = "<group>"; };
+		C1C2CB7F1EA4F96300A04530 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		C1C2CB821EA55B7000A04530 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C1C2CB8E1EA6AAF800A04530 /* default_profile_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_profile_photo.png; sourceTree = "<group>"; };
+		C1C2CB901EA726EF00A04530 /* DropboxMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxMainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +84,7 @@
 		C1AC26B31E9BF3B00058DC8E /* MasterDrive */ = {
 			isa = PBXGroup;
 			children = (
+				C1C2CB811EA55B5E00A04530 /* Model */,
 				C1AC26CA1E9C249F0058DC8E /* Supporting Files */,
 				C1AC26C91E9C24930058DC8E /* View */,
 				C1AC26C81E9C24820058DC8E /* Controller */,
@@ -81,6 +100,9 @@
 				C1AC26D41E9DA58E0058DC8E /* RegistrationViewController.swift */,
 				C1AC26D81EA0461B0058DC8E /* VerificationViewController.swift */,
 				C1C2CB6D1EA32C2400A04530 /* LoginViewController.swift */,
+				C1C2CB7D1EA4F7DC00A04530 /* DropboxViewController.swift */,
+				C1C2CB7F1EA4F96300A04530 /* HomePageViewController.swift */,
+				C1C2CB901EA726EF00A04530 /* DropboxMainViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -108,10 +130,23 @@
 		C1AC26CF1E9C45DF0058DC8E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C1C2CB8E1EA6AAF800A04530 /* default_profile_photo.png */,
 				C1AC26D01E9C460E0058DC8E /* drives.png */,
 				C1AC26D11E9C460E0058DC8E /* Logo.png */,
+				C1C2CB6F1EA4E46800A04530 /* Dropbox_Logo_02.svg.png */,
+				C1C2CB701EA4E46800A04530 /* google_drive.png */,
+				C1C2CB711EA4E46800A04530 /* onedrive.png */,
+				C1C2CB7B1EA4F24900A04530 /* Menu-30.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		C1C2CB811EA55B5E00A04530 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1C2CB821EA55B7000A04530 /* User.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +209,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1AC26BF1E9BF3B10058DC8E /* LaunchScreen.storyboard in Resources */,
+				C1C2CB8F1EA6AAF800A04530 /* default_profile_photo.png in Resources */,
 				C1AC26BC1E9BF3B10058DC8E /* Assets.xcassets in Resources */,
 				C1AC26BA1E9BF3B00058DC8E /* Main.storyboard in Resources */,
+				C1C2CB741EA4E46800A04530 /* onedrive.png in Resources */,
+				C1C2CB721EA4E46800A04530 /* Dropbox_Logo_02.svg.png in Resources */,
+				C1C2CB7C1EA4F24900A04530 /* Menu-30.png in Resources */,
 				C1AC26D31E9C460E0058DC8E /* Logo.png in Resources */,
+				C1C2CB731EA4E46800A04530 /* google_drive.png in Resources */,
 				C1AC26D21E9C460E0058DC8E /* drives.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,8 +232,12 @@
 				C1AC26CE1E9C36A50058DC8E /* PageViewController.swift in Sources */,
 				C1AC26B71E9BF3B00058DC8E /* ViewController.swift in Sources */,
 				C1AC26D91EA0461B0058DC8E /* VerificationViewController.swift in Sources */,
+				C1C2CB801EA4F96300A04530 /* HomePageViewController.swift in Sources */,
+				C1C2CB831EA55B7000A04530 /* User.swift in Sources */,
+				C1C2CB911EA726EF00A04530 /* DropboxMainViewController.swift in Sources */,
 				C1AC26D51E9DA58E0058DC8E /* RegistrationViewController.swift in Sources */,
 				C1AC26B51E9BF3B00058DC8E /* AppDelegate.swift in Sources */,
+				C1C2CB7E1EA4F7DC00A04530 /* DropboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
