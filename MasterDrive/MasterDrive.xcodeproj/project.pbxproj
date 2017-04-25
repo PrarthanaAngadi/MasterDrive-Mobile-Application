@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C151D8071EAEECB700766D89 /* Settings-30.png in Resources */ = {isa = PBXBuildFile; fileRef = C151D8061EAEECB700766D89 /* Settings-30.png */; };
+		C151D8091EAEF24A00766D89 /* Logout Rounded Up-30 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = C151D8081EAEF24A00766D89 /* Logout Rounded Up-30 (1).png */; };
+		C151D80D1EAEF31D00766D89 /* Edit User Male-30 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = C151D80C1EAEF31D00766D89 /* Edit User Male-30 (1).png */; };
+		C1693B6C1EAC8B51006CF398 /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1693B6B1EAC8B51006CF398 /* BoxViewController.swift */; };
+		C1693B6E1EAC8CED006CF398 /* boxlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C1693B6D1EAC8CED006CF398 /* boxlogo.png */; };
 		C1AC26B51E9BF3B00058DC8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC26B41E9BF3B00058DC8E /* AppDelegate.swift */; };
 		C1AC26B71E9BF3B00058DC8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC26B61E9BF3B00058DC8E /* ViewController.swift */; };
 		C1AC26BA1E9BF3B00058DC8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1AC26B81E9BF3B00058DC8E /* Main.storyboard */; };
@@ -30,6 +35,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C151D8061EAEECB700766D89 /* Settings-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-30.png"; sourceTree = "<group>"; };
+		C151D8081EAEF24A00766D89 /* Logout Rounded Up-30 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logout Rounded Up-30 (1).png"; sourceTree = "<group>"; };
+		C151D80C1EAEF31D00766D89 /* Edit User Male-30 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edit User Male-30 (1).png"; sourceTree = "<group>"; };
+		C1693B6B1EAC8B51006CF398 /* BoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxViewController.swift; sourceTree = "<group>"; };
+		C1693B6D1EAC8CED006CF398 /* boxlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boxlogo.png; sourceTree = "<group>"; };
 		C1AC26B11E9BF3B00058DC8E /* MasterDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AC26B41E9BF3B00058DC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1AC26B61E9BF3B00058DC8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +113,7 @@
 				C1C2CB7D1EA4F7DC00A04530 /* DropboxViewController.swift */,
 				C1C2CB7F1EA4F96300A04530 /* HomePageViewController.swift */,
 				C1C2CB901EA726EF00A04530 /* DropboxMainViewController.swift */,
+				C1693B6B1EAC8B51006CF398 /* BoxViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -132,9 +143,13 @@
 			children = (
 				C1C2CB8E1EA6AAF800A04530 /* default_profile_photo.png */,
 				C1AC26D01E9C460E0058DC8E /* drives.png */,
+				C151D8061EAEECB700766D89 /* Settings-30.png */,
 				C1AC26D11E9C460E0058DC8E /* Logo.png */,
 				C1C2CB6F1EA4E46800A04530 /* Dropbox_Logo_02.svg.png */,
+				C151D80C1EAEF31D00766D89 /* Edit User Male-30 (1).png */,
 				C1C2CB701EA4E46800A04530 /* google_drive.png */,
+				C151D8081EAEF24A00766D89 /* Logout Rounded Up-30 (1).png */,
+				C1693B6D1EAC8CED006CF398 /* boxlogo.png */,
 				C1C2CB711EA4E46800A04530 /* onedrive.png */,
 				C1C2CB7B1EA4F24900A04530 /* Menu-30.png */,
 			);
@@ -209,11 +224,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1AC26BF1E9BF3B10058DC8E /* LaunchScreen.storyboard in Resources */,
+				C151D8091EAEF24A00766D89 /* Logout Rounded Up-30 (1).png in Resources */,
 				C1C2CB8F1EA6AAF800A04530 /* default_profile_photo.png in Resources */,
 				C1AC26BC1E9BF3B10058DC8E /* Assets.xcassets in Resources */,
+				C1693B6E1EAC8CED006CF398 /* boxlogo.png in Resources */,
 				C1AC26BA1E9BF3B00058DC8E /* Main.storyboard in Resources */,
 				C1C2CB741EA4E46800A04530 /* onedrive.png in Resources */,
+				C151D80D1EAEF31D00766D89 /* Edit User Male-30 (1).png in Resources */,
 				C1C2CB721EA4E46800A04530 /* Dropbox_Logo_02.svg.png in Resources */,
+				C151D8071EAEECB700766D89 /* Settings-30.png in Resources */,
 				C1C2CB7C1EA4F24900A04530 /* Menu-30.png in Resources */,
 				C1AC26D31E9C460E0058DC8E /* Logo.png in Resources */,
 				C1C2CB731EA4E46800A04530 /* google_drive.png in Resources */,
@@ -235,6 +254,7 @@
 				C1C2CB801EA4F96300A04530 /* HomePageViewController.swift in Sources */,
 				C1C2CB831EA55B7000A04530 /* User.swift in Sources */,
 				C1C2CB911EA726EF00A04530 /* DropboxMainViewController.swift in Sources */,
+				C1693B6C1EAC8B51006CF398 /* BoxViewController.swift in Sources */,
 				C1AC26D51E9DA58E0058DC8E /* RegistrationViewController.swift in Sources */,
 				C1AC26B51E9BF3B00058DC8E /* AppDelegate.swift in Sources */,
 				C1C2CB7E1EA4F7DC00A04530 /* DropboxViewController.swift in Sources */,

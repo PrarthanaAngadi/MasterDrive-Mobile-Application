@@ -307,6 +307,39 @@
             </objects>
             <point key="canvasLocation" x="591" y="-287"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="jPg-vh-73c">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfY-04-8E4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="1P4-4R-0rr" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y69-4p-vOf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="6sA-xd-Cam">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ieR-tM-j0p">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ieR-tM-j0p" id="7QG-Ok-86Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1P4-4R-0rr" id="9Ig-xb-CJ5"/>
+                            <outlet property="delegate" destination="1P4-4R-0rr" id="nZE-DW-SAs"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1408.8" y="-193.85307346326837"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="mjv-5v-d2y">
             <objects>
@@ -399,8 +432,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGd-6E-e5o">
-                                <rect key="frame" x="16" y="180" width="172" height="180"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGd-6E-e5o">
+                                <rect key="frame" x="16" y="104" width="172" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="172" id="W0s-FY-njp"/>
                                     <constraint firstAttribute="height" constant="180" id="Yh4-TB-fVV"/>
@@ -410,20 +443,16 @@
                                     <action selector="dropBoxIconOnClick:" destination="HdK-EX-qJd" eventType="touchUpInside" id="tEb-oI-Wvo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnO-nY-FQ8">
-                                <rect key="frame" x="60" y="367" width="256" height="256"/>
-                                <state key="normal" backgroundImage="onedrive.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-ls-y1o">
-                                <rect key="frame" x="172" y="162" width="224" height="224"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-ls-y1o">
+                                <rect key="frame" x="174" y="82" width="224" height="224"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="224" id="VPI-Lg-Jkp"/>
                                     <constraint firstAttribute="width" constant="224" id="wGN-lH-7qz"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="google_drive.png"/>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLp-3r-0WI">
-                                <rect key="frame" x="0.0" y="40" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yLp-3r-0WI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.036453864820000001" green="0.84386588750000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.036453864820000001" green="0.84386588750000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
@@ -443,8 +472,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXX-4Y-BZ0">
                                 <rect key="frame" x="0.0" y="84" width="0.0" height="583"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vN-yo-BKf">
-                                        <rect key="frame" x="8" y="225" width="172" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vN-yo-BKf">
+                                        <rect key="frame" x="8" y="190" width="0.0" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" id="cH9-ig-Zlf"/>
                                         </constraints>
@@ -453,8 +482,8 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-o7-1E0">
-                                        <rect key="frame" x="8" y="288" width="172" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-o7-1E0">
+                                        <rect key="frame" x="8" y="234" width="0.0" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" id="DFC-VR-cgc"/>
                                             <constraint firstAttribute="height" constant="45" id="y1x-Xm-Wmz"/>
@@ -467,8 +496,8 @@
                                             <action selector="logoutButtonOnClick:" destination="HdK-EX-qJd" eventType="touchUpInside" id="eFk-bm-qVS"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi7-ld-yf7">
-                                        <rect key="frame" x="8" y="163" width="172" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi7-ld-yf7">
+                                        <rect key="frame" x="8" y="114" width="0.0" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="2P3-R6-aeA"/>
                                             <constraint firstAttribute="width" id="M5a-6o-LWf"/>
@@ -477,8 +506,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="default_profile_photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TfU-pa-gZP">
-                                        <rect key="frame" x="16" y="8" width="156" height="119"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_profile_photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TfU-pa-gZP">
+                                        <rect key="frame" x="8" y="17" width="0.0" height="157"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="157" id="bII-pB-7zY"/>
                                             <constraint firstAttribute="width" id="xEr-eI-Sge"/>
@@ -498,9 +527,20 @@
                                     <constraint firstItem="TfU-pa-gZP" firstAttribute="leading" secondItem="5vN-yo-BKf" secondAttribute="leading" id="smX-rX-RLx"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnO-nY-FQ8">
+                                <rect key="frame" x="45" y="347" width="295" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="Lhb-ly-fiX"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="boxlogo.png"/>
+                                <connections>
+                                    <action selector="boxIconOnClick:" destination="HdK-EX-qJd" eventType="touchUpInside" id="XYF-Wa-E4Z"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.94584041340000002" green="0.94584041340000002" blue="0.94584041340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="PnO-nY-FQ8" firstAttribute="centerX" secondItem="yLp-3r-0WI" secondAttribute="centerX" id="09g-1J-KMI"/>
                             <constraint firstItem="Euq-ls-y1o" firstAttribute="top" secondItem="yLp-3r-0WI" secondAttribute="bottom" constant="78" id="2Ha-wo-Yyu"/>
                             <constraint firstItem="tGd-6E-e5o" firstAttribute="baseline" secondItem="Euq-ls-y1o" secondAttribute="firstBaseline" id="Dps-y2-tJy"/>
                             <constraint firstItem="kXX-4Y-BZ0" firstAttribute="bottom" secondItem="3Tf-5B-UvE" secondAttribute="top" id="GEZ-J8-jSq"/>
@@ -509,8 +549,8 @@
                             <constraint firstItem="yLp-3r-0WI" firstAttribute="leading" secondItem="hSP-Gk-oqV" secondAttribute="leading" id="Sog-x9-ZJc"/>
                             <constraint firstItem="kXX-4Y-BZ0" firstAttribute="leading" secondItem="yLp-3r-0WI" secondAttribute="leading" id="Ss2-dw-zsw"/>
                             <constraint firstItem="tGd-6E-e5o" firstAttribute="leading" secondItem="hSP-Gk-oqV" secondAttribute="leadingMargin" id="Tfa-Ed-3kE"/>
-                            <constraint firstItem="yLp-3r-0WI" firstAttribute="centerX" secondItem="PnO-nY-FQ8" secondAttribute="centerX" id="Twi-yd-q5L"/>
-                            <constraint firstItem="PnO-nY-FQ8" firstAttribute="top" secondItem="tGd-6E-e5o" secondAttribute="bottom" constant="7" id="WJt-a1-BVG"/>
+                            <constraint firstItem="PnO-nY-FQ8" firstAttribute="leading" secondItem="tGd-6E-e5o" secondAttribute="leading" id="ayJ-92-TOJ"/>
+                            <constraint firstItem="PnO-nY-FQ8" firstAttribute="top" secondItem="Euq-ls-y1o" secondAttribute="bottom" constant="26" id="d6e-sK-lWO"/>
                             <constraint firstItem="kXX-4Y-BZ0" firstAttribute="top" secondItem="yLp-3r-0WI" secondAttribute="bottom" id="eVL-Cn-EdU"/>
                             <constraint firstItem="yLp-3r-0WI" firstAttribute="top" secondItem="I4n-9d-cAR" secondAttribute="bottom" constant="20" id="gp8-jB-3gt"/>
                             <constraint firstAttribute="trailing" secondItem="yLp-3r-0WI" secondAttribute="trailing" id="m8S-2Y-A1i"/>
@@ -527,11 +567,42 @@
                         <outlet property="userName" destination="vi7-ld-yf7" id="Lm5-n3-dkY"/>
                         <outlet property="userNameWidthConstraint" destination="M5a-6o-LWf" id="OVW-Cr-BDO"/>
                         <segue destination="Kb7-bz-63w" kind="show" identifier="HomePageToDropboxAuth" id="wYf-Jg-Jph"/>
+                        <segue destination="3e7-8S-bTi" kind="show" identifier="HomePageToBoxAuth" id="5v3-5v-qIb"/>
+                        <segue destination="zSQ-a0-nJG" kind="show" identifier="HomePageToDropboxMain" id="vTR-nb-MOB"/>
+                        <segue destination="ejy-Ou-ce4" kind="show" identifier="HomePageToLogin" id="dgn-G2-i0z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNl-ha-Qzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1639.2" y="1252.6236881559221"/>
+        </scene>
+        <!--Box View Controller-->
+        <scene sceneID="rHj-f3-Bhe">
+            <objects>
+                <viewController id="3e7-8S-bTi" customClass="BoxViewController" customModule="MasterDrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iZ6-bM-q4g"/>
+                        <viewControllerLayoutGuide type="bottom" id="fzY-hN-JFG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vOd-1u-W38">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7s1-Wp-p6f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="7s1-Wp-p6f" id="OBd-Vl-cSc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2v-P6-ILb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812" y="1743.778110944528"/>
         </scene>
         <!--Dropbox View Controller-->
         <scene sceneID="1F7-i8-AeP">
@@ -574,16 +645,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="welcome to the dropbox main page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="US9-iQ-Q8H">
-                                <rect key="frame" x="53" y="131" width="269" height="21"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-19-jLM">
+                                <rect key="frame" x="0.0" y="65" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.036453864820000001" green="0.84386588750000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.036453864820000001" green="0.84386588750000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="My Dropbox" id="HiO-3c-scQ"/>
+                                </items>
+                            </navigationBar>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AgZ-Yb-79g">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Profile" image="Edit User Male-30 (1).png" id="OzV-lj-8I7">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Settings" image="Settings-30.png" id="0UU-FJ-y92"/>
+                                    <tabBarItem title="Logout" image="Logout Rounded Up-30 (1).png" id="qhg-o0-cZ0"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gfh-ZN-aHT">
+                                <rect key="frame" x="0.0" y="109" width="375" height="509"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="gfh-ZN-aHT" id="RWM-kK-ott"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6Y-Mk-F1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -673,20 +769,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEq-CH-kce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2578.4000000000001" y="1252.6236881559221"/>
+            <point key="canvasLocation" x="-3287" y="1253"/>
         </scene>
     </scenes>
     <resources>
         <image name="Dropbox_Logo_02.svg.png" width="2000" height="1869"/>
+        <image name="Edit User Male-30 (1).png" width="30" height="30"/>
         <image name="Logo.png" width="325" height="291"/>
+        <image name="Logout Rounded Up-30 (1).png" width="30" height="30"/>
         <image name="Menu-30.png" width="30" height="30"/>
+        <image name="Settings-30.png" width="30" height="30"/>
+        <image name="boxlogo.png" width="400" height="297"/>
         <image name="default_profile_photo.png" width="256" height="256"/>
         <image name="drives.png" width="258" height="195"/>
         <image name="google_drive.png" width="400" height="300"/>
-        <image name="onedrive.png" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7xm-zP-HgX"/>
+        <segue reference="dgn-G2-i0z"/>
+        <segue reference="vTR-nb-MOB"/>
         <segue reference="dtN-3k-hCe"/>
         <segue reference="LbX-Od-sfv"/>
     </inferredMetricsTieBreakers>

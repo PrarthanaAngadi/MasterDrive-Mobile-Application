@@ -18,7 +18,9 @@ class ViewController: UIViewController {
             let user = NSKeyedUnarchiver.unarchiveObject(with: decoded!) as! User
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
             nextViewController.user = user;
-            self.present(nextViewController, animated:true, completion:nil)
+            print("User email", user.email)
+            let navController = UINavigationController(rootViewController: nextViewController)
+            self.present(navController, animated:true, completion:nil)
         }else {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
             self.present(nextViewController, animated:true, completion:nil)
